@@ -17,8 +17,8 @@ Jeweler::Tasks.new do |gem|
   gem.name = "mongoid-affiliate-window"
   gem.homepage = "http://github.com/andyt/mongoid-affiliate-window"
   gem.license = "MIT"
-  gem.summary = %Q{TODO: one-line summary of your gem}
-  gem.description = %Q{TODO: longer description of your gem}
+  gem.summary = %Q{Mongoid extensions for using models with Affiliate Window}
+  gem.description = %Q{Mongoid extensions for using models with Affiliate Window}
   gem.email = "andy.triggs@gmail.com"
   gem.authors = ["andy.triggs@gmail.com"]
   # dependencies defined in Gemfile
@@ -35,14 +35,14 @@ end
 require 'rcov/rcovtask'
 Rcov::RcovTask.new do |test|
   test.libs << 'test'
-  test.pattern = 'test/**/test_*.rb'
+  test.pattern = 'spec/**/spec_*.rb'
   test.verbose = true
   test.rcov_opts << '--exclude "gems/*"'
 end
 
 task :default => :test
 
-require 'rake/rdoctask'
+require 'rdoc/task'
 Rake::RDocTask.new do |rdoc|
   version = File.exist?('VERSION') ? File.read('VERSION') : ""
 
