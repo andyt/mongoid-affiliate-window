@@ -1,6 +1,16 @@
 = mongoid-affiliate-window
 
-Description goes here.
+A fledgeling gem to faciliate using Mongoid with the AffiliateWindow APIs and https://github.com/andyt/affiliate-window.
+
+There's not much going on yet - just a merchant module which you can integrate into your application's Merchant model.
+
+  class Merchant
+    include Mongoid::Document
+    include Mongoid::AffiliateWindow::Merchant
+  end
+
+This will set up your Merchant model with appropriate fields, validations and helper methods for working with AffiliateWindow.
+
 
 == Contributing to mongoid-affiliate-window
  
@@ -14,6 +24,5 @@ Description goes here.
 
 == Copyright
 
-Copyright (c) 2011 andy.triggs@gmail.com. See LICENSE.txt for
-further details.
+Copyright (c) 2011 andy.triggs@gmail.com. See LICENSE.txt for further details.
 
